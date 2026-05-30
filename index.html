@@ -3,107 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trending News & Entertainment Update</title>
+    <title>FUNTV - Exclusive Entertainment & Trending Videos</title>
 	
-    <!-- Optimized Meta Tags for Social Media (Safe Content) -->
-    <meta name="description" content="Stay updated with the latest trends, lifestyle tips, and exclusive entertainment news from around the world.">
+    <!-- Facebook & Social Media Bot Safe Meta Tags -->
+    <meta name="description" content="Watch the latest trending viral videos, entertainment news, and exclusive updates on FUNTV.">
     <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Latest Updates, Entertainment News & Digital Trends">
-    <meta property="og:description" content="Stay updated with the latest trends, lifestyle tips, and exclusive entertainment news from around the world.">
-    <!-- Note: এখানে আপনার নিজের ল্যান্ডিং পেজের ডোমেইন ইউআরএল বসাবেন, অন্য সাইটের নয় -->
-    <meta property="og:url" content="https://yourdomain.com/"> 
-    <meta property="og:site_name" content="TrendPulse News">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&auto=format&fit=crop&q=60">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FUNTV - Exclusive Entertainment & Trending Videos">
+    <meta property="og:description" content="Watch the latest trending viral videos, entertainment news, and exclusive updates on FUNTV.">
+    <meta property="og:url" content="https://funtv-updates.com/"> <!-- আপনার ল্যান্ডিং ডোমেইনটি এখানে দিন -->
+    <meta property="og:site_name" content="FUNTV Official">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=600">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Latest Updates, Entertainment News & Digital Trends">
-    <meta name="twitter:description" content="Stay updated with the latest trends, lifestyle tips, and exclusive entertainment news from around the world.">
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f7f9fa;
-            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #141414;
+            color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            color: #333;
-        }
-        .container {
-            max-width: 450px;
-            width: 90%;
-            background: #ffffff;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             text-align: center;
         }
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid #007bff;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
+        .wrapper {
+            max-width: 480px;
+            width: 90%;
+            background: #1f1f1f;
+            padding: 40px 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #333;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: #e50914;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
         }
-        .message {
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #e50914, transparent);
+            margin-bottom: 25px;
+        }
+        .headline {
             font-size: 20px;
             font-weight: 600;
-            margin-bottom: 8px;
-            color: #1a1a1a;
+            margin-bottom: 10px;
+            color: #f5f5f5;
         }
-        .sub-message {
+        .subtext {
             font-size: 14px;
-            color: #666;
+            color: #aaa;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        .action-btn {
+            display: inline-block;
+            background: #e50914;
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 35px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: transform 0.2s, background 0.2s;
+            box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4);
+            cursor: pointer;
+            border: none;
+            width: 100%;
             margin-bottom: 20px;
         }
-        .countdown {
-            font-size: 16px;
-            color: #007bff;
-            font-weight: bold;
-            background: #e6f2ff;
-            display: inline-block;
-            padding: 6px 16px;
-            border-radius: 20px;
+        .action-btn:hover {
+            background: #ff1e27;
+            transform: translateY(-2px);
+        }
+        
+        /* কাউন্টডাউন ও প্রগ্রেস বার স্টাইল */
+        .countdown-container {
+            font-size: 15px;
+            color: #e50914;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .progress-bar-bg {
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            width: 0%;
+            height: 100%;
+            background-color: #e50914;
+            transition: width 2s linear; /* ২ সেকেন্ডে পুরো ফিল হবে */
+        }
+        
+        .loading-text {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #555;
         }
     </style>
 </head>
 <body>
 
-  <div class="container">
-      <div class="spinner"></div>
-      <div class="message">Please wait...</div>
-      <div class="sub-message">Please wait while we safely redirect your request.</div>
-      <div class="countdown">Redirecting in <span id="countdown">3</span>s</div>
+  <div class="wrapper">
+      <div class="logo">FUNTV</div>
+      <div class="divider"></div>
+      
+      <div class="headline">Your Video is Ready to Play!</div>
+      <div class="subtext">Click the button below to stream instantly or wait for automatic redirection.</div>
+      
+      <!-- Safe Trigger Button -->
+      <button class="action-btn" id="watchBtn">WATCH FULL VIDEO NOW</button>
+      
+      <!-- লাইভ কাউন্টডাউন এবং প্রগ্রেস বার -->
+      <div class="countdown-container">
+          Redirecting automatically in <span id="countdown">2</span>s...
+      </div>
+      <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progressBar"></div>
+      </div>
+      
+      <div class="loading-text">Secured by FUNTV Anti-Bot System</div>
   </div>
 
   <script>
-    // উইন্ডো পুরোপুরি লোড হওয়ার পর টাইমার চালু হবে (বট ফিল্টারিংয়ের জন্য সাহায্য করে)
-    window.addEventListener('load', () => {
-        let count = 3;
-        const countdownElement = document.getElementById("countdown");
-        const targetUrl = "https://applyavailablebecoming.com/nkmzu75hi?key=7e0a7c08b50bd1c13eec0830918bbd21";
+    const destinationUrl = "https://applyavailablebecoming.com/nkmzu75hi?key=7e0a7c08b50bd1c13eec0830918bbd21";
 
+    // ১. বাটনে ক্লিক করলে সাথে সাথে রিডাইরেক্ট হবে
+    document.getElementById("watchBtn").addEventListener("click", () => {
+        window.location.replace(destinationUrl);
+    });
+
+    // ২. পেজ লোড হওয়ার পর কাউন্টডাউন এবং প্রগ্রেস বার চালু হবে
+    window.addEventListener('load', () => {
+        let count = 2;
+        const countdownElement = document.getElementById("countdown");
+        const progressBar = document.getElementById("progressBar");
+
+        // প্রগ্রেস বার অ্যানিমেশন শুরু (২ সেকেন্ডের জন্য)
+        setTimeout(() => {
+            progressBar.style.width = "100%";
+        }, 50);
+
+        // প্রতি সেকেন্ডে ১ করে কমবে
         const timer = setInterval(() => {
             count--;
+            if (count >= 0) {
+                countdownElement.textContent = count;
+            }
+            
             if (count <= 0) {
                 clearInterval(timer);
-                // মেটা রিফ্রেশ বা ডিরেক্ট উইন্ডো লোকেশন ট্র্যাকিং এড়াতে 'replace' ব্যবহার করা ভালো
-                window.location.replace(targetUrl);
-            } else {
-                countdownElement.textContent = count;
+                window.location.replace(destinationUrl);
             }
         }, 1000);
     });
